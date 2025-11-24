@@ -1,0 +1,132 @@
+/* Navbar-Styles-Start */
+
+.nav-container {
+  background: rgb(66, 64, 64);
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-container.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  transition: all .3s ease; /* valid and smooth */
+}
+
+.logo-section .logo {
+  width: 80px;
+  padding: 20px;
+  display: block;
+}
+
+.hamburger {
+  width: 80px;
+  display: flex;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+
+.nav-social-links-main .nav-social-links,
+.nav-links-main .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-center {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Desktop layout */
+@media screen and (min-width: 992px) {
+  .nav-container .hamburger {
+    display: none;
+  }
+
+  .nav-container {
+    background: rgb(68, 67, 67);
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-center {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logo-section {
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .nav-links-main .nav-links {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+  }
+
+  .nav-social-links-main .nav-social-links {
+    display: flex;
+    column-gap: 30px;
+    justify-content: flex-end;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .nav-social-links .nav-social-link {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgb(213, 207, 207);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-social-links .nav-social-link img {
+    width: 20px;
+    display: block;
+    background-color: rgb(253, 251, 249);
+    border-radius: 35%;
+  }
+
+  .nav-social-links .nav-social-link:hover {
+    transition: transform .2s ease; /* only animate transform for perf */
+    transform: translateY(-4px);
+  }
+
+  .nav-links .nav-link {
+    color: rgb(242, 240, 240);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 10px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .nav-container .nav-link.active,
+  .nav-container .nav-link:hover {
+    background-color: rgb(16, 16, 16);
+    color: rgb(250, 249, 249);
+  }
+}
+
+/* Navbar-Styles-End */

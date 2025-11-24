@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Manjunath</title>
+  <link rel="shortcut icon" href="../Assets/NavLogo.png" type="image/x-icon">
+  <link rel="stylesheet" href="../Css/navbar.css">
+  <link rel="stylesheet" href="../Css/sidebar.css">
+  <link rel="stylesheet" href="../Css/footer.css">
+  <link rel="stylesheet" href="../Css/Common.css">
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="nav-container">
+    <div class="nav-center">
+      <div class="logo-section">
+        <a href="./">
+          <img src="../Assets/NavLogo.png" alt="navbar logo" class="logo">
+        </a>
+      </div>
+
+      <!-- hamburger: role + aria for accessibility; removed duplicate class from img -->
+      <div class="hamburger" role="button" aria-label="Open sidebar">
+        <img src="../Assets/Sidebar.png" alt="open sidebar button">
+      </div>
+
+      <div class="nav-links-main">
+        <ul class="nav-links">
+          <li><a href="./" class="nav-link">home</a></li>
+          <li><a href="./about.html" class="nav-link">about</a></li>
+          <li><a href="./skills.html" class="nav-link">skills</a></li>
+          <li><a href="./contact.html" class="nav-link active">contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-social-links-main">
+        <ul class="nav-social-links">
+          <li class="nav-social-link">
+            <a href="https://www.linkedin.com/in/manjunath-reddy-bhumireddy-/">
+              <img src="../Assets/linkedin.png" alt="LinkedIn">
+            </a>
+          </li>
+          <li class="nav-social-link">
+            <a href="https://www.instagram.com/i__manjunath/">
+              <img src="../Assets/instagram.png" alt="Instagram">
+            </a>
+          </li>
+          <li class="nav-social-link">
+            <a href="https://github.com/manjunathreddy25">
+              <img src="../Assets/github.png" alt="Github">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <!-- Sidebar Start -->
+  <aside class="sidebar-container" aria-hidden="true">
+    <div class="sidebar-center wrapper">
+      <div class="side-header">
+        <div class="logo-section">
+          <a href="./">
+            <img src="../Assets/NavLogo.png" alt="navbar logo image">
+          </a>
+        </div>
+        <div class="close-button" role="button" aria-label="Close sidebar">
+          <img src="../Assets/Sidebar.png" alt="close sidebar button">
+        </div>
+      </div>
+
+      <div class="sidebar-content">
+        <div class="sidebar-links-main">
+          <ul class="sidebar-links">
+            <li><a href="./" class="sidebar-link">home</a></li>
+            <li><a href="./about.html" class="sidebar-link">about</a></li>
+            <li><a href="./skills.html" class="sidebar-link">skills</a></li>
+            <li><a href="./contact.html" class="sidebar-link active">contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <!-- Sidebar End -->
+
+  <!-- hero section start-->
+  <div class="page-hero-container">
+    <div class="page-hero">
+      <div class="hero-img-container">
+        <img src="../Assets/portfolio-background.jpg" alt="Hero Page">
+      </div>
+      <div class="hero-box padding-top-mobile-thirty padding-bottom-mobile-thirty">
+        <div class="hero-content text-center wrapper text-container">
+          <h1 class="heading">Bhumireddy Manjunath Reddy</h1>
+          <p class="desc">CONTACT: +91 9701875821 &nbsp; || &nbsp; Email: bhumireddymanjunath2001@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- hero section end -->
+
+  <!-- Contact Section Start-->
+  <section class="contact-section-main">
+    <div class="contact-section-center wrapper text-center text-container">
+      <div class="section-title padding-top-desktop-fifty padding-bottom-desktop-fifty padding-bottom-mobile-fifty padding-top-mobile-fifty">
+        <h3 class="title">Contact Me</h3>
+        <div class="underline"></div>
+
+        <div class="contact-section padding-bottom-mobile-fifty padding-top-mobile-fifty padding-bottom-desktop-fifty padding-top-desktop-fifty">
+          <div class="text-component padding-top-mobile-fifty padding-bottom-mobile-fifty padding-bottom-desktop-fifty padding-top-desktop-fifty">
+            <form class="contact-me-form" action="#" method="post" aria-label="Contact form">
+              <label for="name" class="sr-only">Name</label>
+              <input type="text" name="name" id="name" placeholder="Enter your name" class="primary-input" aria-label="Your name">
+
+              <!-- fixed duplicate id -> changed id to email, added label/aria -->
+              <label for="email" class="sr-only">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" class="primary-input" aria-label="Your email">
+
+              <label for="message" class="sr-only">Message</label>
+              <textarea name="message" id="message" cols="30" rows="5" class="primary-text-area" placeholder="Enter your message" aria-label="Your message"></textarea>
+
+              <button type="submit" class="primary-button-dark">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section End -->
+
+  <!-- Footer Start -->
+  <footer class="footer-container">
+    <div class="footer-center wrapper">
+      <div class="footer-links-main">
+        <ul class="footer-links">
+          <li><a href="./" class="footer-link">home</a></li>
+          <li><a href="./about.html" class="footer-link">about</a></li>
+          <li><a href="./skills.html" class="footer-link">skills</a></li>
+          <li><a href="./contact.html" class="footer-link active">contact</a></li>
+        </ul>
+      </div>
+
+      <div class="social-links-main">
+        <ul class="social-links">
+          <li class="social-link">
+            <a href="https://www.linkedin.com/in/bhumireddymanjunathreddy/">
+              <img src="../Assets/linkedin.png" alt="LinkedIn">
+            </a>
+          </li>
+          <li class="social-link">
+            <a href="https://www.instagram.com/i__manjunath/">
+              <img src="../Assets/instagram.png" alt="Instagram">
+            </a>
+          </li>
+          <li class="social-link">
+            <a href="https://github.com/manjunathreddy25">
+              <img src="../Assets/github.png" alt="Github">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-copy-right">
+        <p>made by B. Manjunath Reddy</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Script -->
+  <script src="../Js/javascript.js"></script>
+</body>
+</html>

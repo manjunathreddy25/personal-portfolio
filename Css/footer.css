@@ -1,0 +1,113 @@
+/* Footer Start */
+.footer-container {
+  width: 100%;
+  min-height: 300px;
+  background: url("../Assets/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* overlay layer */
+.footer-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(33, 34, 33, 0.5);
+}
+
+/* layout */
+.footer-container .footer-center {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding-top: 80px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* links reset */
+.footer-container .footer-links,
+.footer-container .social-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* footer nav links */
+.footer-container .footer-links {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container .footer-link {
+  color: antiquewhite;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-container .footer-link:hover,
+.footer-container .footer-link.active {
+  text-decoration: underline;
+}
+
+/* social icons */
+.footer-container .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.footer-container .social-link {
+  width: 40px;
+  height: 40px;
+  border: 3px solid whitesmoke;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* make images behave like inline-block elements (not flex containers) */
+.social-links-main .social-link img,
+.footer-container .social-link img {
+  width: 30px;
+  height: auto;
+  display: block;
+  border-radius: 35%;
+  background-color: rgb(253, 251, 249);
+}
+
+/* hover animation — animate transform only */
+.footer-container .social-link:hover {
+  transition: transform .2s ease;
+  transform: translateY(-3px);
+}
+
+/* copyright */
+.footer-container .footer-copy-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+  font-size: .8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  padding-bottom: 40px;
+}
+/* Footer End */
