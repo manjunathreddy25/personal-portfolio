@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="fade-in" style="max-width: 800px; margin: 0 auto; min-height: 80vh;">
+    <a href="{{ url_for('home') }}#projects"
+        style="display: inline-block; margin-bottom: 2rem; color: var(--secondary-text);">&larr; Back to Projects</a>
+
+    <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-color);">{{ project.title }}</h1>
+        <div
+            style="font-weight: 600; color: var(--text-color); margin-bottom: 2rem; background: var(--bg-color); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-color);">
+            {{ project.summary }}
+        </div>
+    </header>
+
+    <div style="font-size: 1.1rem; line-height: 1.8; white-space: pre-line;">
+        {{ project.description }}
+    </div>
+</section>
+{% endblock %}

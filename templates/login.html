@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero fade-in" style="align-items: center;">
+    <h1>Admin Login</h1>
+    <form action="{{ url_for('login') }}" method="POST"
+        style="width: 100%; max-width: 400px; background: var(--card-bg); padding: 2rem; border-radius: 8px;">
+        <div style="margin-bottom: 1rem;">
+            <label for="username" style="display: block; margin-bottom: 0.5rem;">Username</label>
+            <input type="text" id="username" name="username" required
+                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="password" style="display: block; margin-bottom: 0.5rem;">Password</label>
+            <input type="password" id="password" name="password" required
+                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;">
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Login</button>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div style="color: red; margin-top: 1rem; text-align: center;">{{ messages[0] }}</div>
+        {% endif %}
+        {% endwith %}
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="fade-in">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h1>Admin Dashboard</h1>
+        <a href="{{ url_for('logout') }}" class="btn" style="background-color: #333;">Logout</a>
+    </div>
+
+    <!-- Contact Messages -->
+    <div style="background: var(--card-bg); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h2>Messages ({{ messages|length }})</h2>
+        <div style="max-height: 300px; overflow-y: auto;">
+            {% for msg in messages %}
+            <div style="border-bottom: 1px solid var(--border-color); padding: 1rem 0;">
+                <strong>{{ msg.name }}</strong> <span style="color: var(--secondary-text);">({{ msg.email }})</span>
+                <p style="margin-top: 0.5rem;">{{ msg.message }}</p>
+                <small style="color: var(--secondary-text);">{{ msg.created_at.strftime('%Y-%m-%d %H:%M') }}</small>
+            </div>
+            {% else %}
+            <p>No messages.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Blog Posts -->
+    <div style="background: var(--card-bg); padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h2>Blog Posts</h2>
+        <!-- Simple form to add post as an example -->
+        <form action="{{ url_for('add_post') }}" method="POST"
+            style="margin-bottom: 2rem; border-bottom: 1px dashed var(--border-color); padding-bottom: 2rem;">
+            <h3>Add New Post</h3>
+            <input type="text" name="title" placeholder="Title" required
+                style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid var(--border-color); border-radius: 4px;">
+            <textarea name="content" placeholder="Content" rows="3" required
+                style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid var(--border-color); border-radius: 4px;"></textarea>
+            <button type="submit" class="btn">Create Post</button>
+        </form>
+
+        <ul style="list-style: none;">
+            {% for post in posts %}
+            <li
+                style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                <span>{{ post.title }}</span>
+                <a href="{{ url_for('delete_post', post_id=post.id) }}" style="color: red;">Delete</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

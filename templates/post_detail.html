@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="fade-in" style="max-width: 800px; margin: 0 auto; min-height: 80vh;">
+    <a href="{{ url_for('blog') }}"
+        style="display: inline-block; margin-bottom: 2rem; color: var(--secondary-text);">&larr; Back to Blog</a>
+
+    <header style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">{{ post.title }}</h1>
+        <div style="color: var(--secondary-text);">
+            Published on {{ post.created_at.strftime('%B %d, %Y') }}
+        </div>
+    </header>
+
+    <div style="font-size: 1.1rem; line-height: 1.8;">
+        <!-- Simple newline to br conversion for manual text input content -->
+        {% for paragraph in post.content.split('\n') %}
+        <p style="margin-bottom: 1.5rem;">{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section (About Me) -->
+<section id="about" class="hero fade-in">
+    <h1>Hello, I'm <br><span style="color: var(--accent-color);">Bhumireddy Manjunath Reddy</span>.</h1>
+    <p>Enthusiastic Computer Science graduate with strong fundamentals in Python and web development. Hands-on
+        experience building full‑stack applications using Python, HTML, CSS, JavaScript, and REST APIs. Eager to
+        contribute to live development projects and grow as a Python Full Stack Developer.</p>
+    <div class="cta-buttons">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="#contact" class="btn"
+            style="background-color: transparent; border: 1px solid var(--accent-color); color: var(--accent-color); margin-left: 1rem;">Contact
+            Me</a>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="fade-in">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <!-- Programming -->
+        <div class="skill-card">
+            <h3>Programming</h3>
+            <p>Python (Core), Basic OOP concepts</p>
+        </div>
+        <!-- Web Technologies -->
+        <div class="skill-card">
+            <h3>Web Technologies</h3>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
+        <!-- Frameworks -->
+        <div class="skill-card">
+            <h3>Frameworks</h3>
+            <p>Flask (Basic), Django (Familiarity)</p>
+        </div>
+        <!-- Databases -->
+        <div class="skill-card">
+            <h3>Databases</h3>
+            <p>SQL (CRUD operations, joins)</p>
+        </div>
+        <!-- Cloud & Tools -->
+        <div class="skill-card">
+            <h3>Tools & Cloud</h3>
+            <p>Git, GitHub, VS Code, AWS (EC2, RDS)</p>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Overview -->
+<section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        {% for project in projects %}
+        <div class="project-card">
+            <div class="project-info">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.summary }}</p>
+                <a href="{{ url_for('project_detail', project_id=project.id) }}" class="project-link"
+                    style="color: var(--accent-color); border-color: var(--accent-color);">View Project &rarr;</a>
+            </div>
+        </div>
+        {% else %}
+        <p>No projects added yet.</p>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="fade-in">
+    <h2>Education</h2>
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-date">Graduated: May 2024</div>
+            <h3>Bachelor of Technology (B.Tech) – Computer Science Engineering</h3>
+            <p>SSN Engineering College, Ongole, India</p>
+        </div>
+    </div>
+</section>
+
+<!-- Key Strengths Section -->
+<section id="strengths" class="fade-in">
+    <h2>Key Strengths</h2>
+    <ul style="list-style: disc; padding-left: 1.5rem; font-size: 1.1rem; line-height: 2;">
+        <li>Strong willingness to learn new technologies</li>
+        <li>Logical thinking and problem‑solving skills</li>
+        <li>Good understanding of full‑stack development basics</li>
+        <li>Team collaboration and clear communication</li>
+    </ul>
+</section>
+
+<!-- Additional Details / Achievements Section -->
+<section id="achievements" class="fade-in">
+    <h2>Achievements</h2>
+    <ul style="list-style: disc; padding-left: 1.5rem; font-size: 1.1rem; line-height: 2;">
+        <li>Completed HackerRank 30‑Day Python Coding Challenge</li>
+        <li>Actively practicing Python and web development through hands‑on projects</li>
+    </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="fade-in" style="border-bottom: none;">
+    <h2>Get In Touch</h2>
+    <p style="margin-bottom: 2rem; color: var(--secondary-text);">
+        Bangalore, India | 9701875821 | <a href="mailto:bhumireddymanjunath2001@gmail.com"
+            style="color: var(--accent-color);">bhumireddymanjunath2001@gmail.com</a>
+    </p>
+    <form id="contact-form" style="max-width: 600px;">
+        <div style="margin-bottom: 1rem;">
+            <label for="name" style="display: block; margin-bottom: 0.5rem;">Name</label>
+            <input type="text" id="name" name="name" required
+                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
+            <input type="email" id="email" name="email" required
+                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;">
+        </div>
+        <div style="margin-bottom: 1rem;">
+            <label for="message" style="display: block; margin-bottom: 0.5rem;">Message</label>
+            <textarea id="message" name="message" rows="5" required
+                style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 4px;"></textarea>
+        </div>
+        <button type="submit" class="btn">Send Message</button>
+        <p id="form-status" style="margin-top: 1rem;"></p>
+    </form>
+    <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+        <a href="https://www.linkedin.com/in/manjunath-reddy-bhumireddy-/" target="_blank"
+            style="color: var(--accent-color);">LinkedIn</a>
+        <a href="https://github.com/manjunathreddy25" target="_blank" style="color: var(--accent-color);">GitHub</a>
+    </div>
+</section>
+{% endblock %}
